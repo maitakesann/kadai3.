@@ -24,7 +24,7 @@
 
       <div class="row">
         <div class="btn btn-outline-secondary btn-block">
-          <%= link_to "aikon", @user_show_path %>
+          <%= link_to "aikon", edit_user_path(@user.id)  %>
         </div>
 
         <h2>New book</h2>
@@ -57,13 +57,20 @@
         </thead>
 
         <tbody>
+        <% @books.each do |book| %>
           <tr>
             <tb></tb>
-            <td>投稿ユ</td>
-            <td>ddd<%= @users.name %> </td>
-            <td><%= link_to "show",shousers_path(params[:id]) %></td>
+
+            <td><%= attachment_image_tag book.user, :profile_image, :fill, 20, 20, fallback: "no_image.jpg"  %></td>
+            <td>
+              <%= book.user.name %>
+            </td>
+            <td><%= link_to "show", user_path(book.user.id) %></td>
+
           </tr>
+        <%end%>
         </tbody>
+
 
       </table>
 
