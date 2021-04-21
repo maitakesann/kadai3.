@@ -2,7 +2,10 @@
 <table class="table table-hover table-inverse">
  <tbody>
     <tr>
-      <td></td>
+      <td>
+        <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"  %>
+        
+      </td>
       <td>
         <%= link_to @book do %>
         <%= @book.title %>
