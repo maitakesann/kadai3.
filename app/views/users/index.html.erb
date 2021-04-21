@@ -12,7 +12,7 @@
             <th>name</th>
             <th><%= user.name %></th>
           </tr>
-          
+
           <tr>
             <th>introdacution</th>
             <th><%= user.introduction %></th>
@@ -21,12 +21,13 @@
 
       </table>
       <%end%>
-
       <div class="row">
         <div class="btn btn-outline-secondary btn-block">
           <%= link_to "aikon", edit_user_path(@user.id)  %>
         </div>
+      </div>
 
+      <div class="row">
         <h2>New book</h2>
 
         <%= form_with model: @book, local: true do |f| %>
