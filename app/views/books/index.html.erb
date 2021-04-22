@@ -1,4 +1,10 @@
 <div class="container">
+  <% if @book.errors.any? %>
+  <%= @book.errors.count %>件のエラーが発生しました
+  <% @book.errors.full_messages.each do |message| %>
+  <%= message %>
+  <% end %>
+  <% end %>
   <div class="row">
     <div class="col-md-3">
      <%= render 'users/list',user:@user,book:@book %>
@@ -18,19 +24,19 @@
         </thead>
 
         <tbody>
-        <% @books.each do |book| %>
+          <% @books.each do |book| %> 
           <tr>
             <td><%= attachment_image_tag book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
             <td>
               <%= link_to book_path(book.id) do %>
-              <%= book.title %>
+              <%= book.title %>cd
               <%end%>
             </td>
             <td>
               <%= book.body %>
             </td>
           </tr>
-        <%end%>
+          <%end%>
         </tbody>
 
       </table>

@@ -29,6 +29,9 @@
                 <% if @book.user == current_user %>
                 <%= link_to "edit", edit_book_path(@book) %>
                 <%= link_to "destroy", book_path(@book), method: :delete %>
+                <%else%>
+                <td></td>
+                <td></td>
                 <%end%>
               </td>
             </tr>
