@@ -68,8 +68,7 @@
 
 
     <div class="container">
-     <% render 'layouts/notifications' %>
-
+      <%= flash[:notice] %>
      <%= yield %>
     </div>
 
