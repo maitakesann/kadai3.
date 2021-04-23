@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!,except: [:root_path]
+  # before_action :authenticate_user!,except: [:top,:home]
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 

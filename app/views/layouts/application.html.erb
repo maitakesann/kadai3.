@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <script src="https://kit.fontawesome.com/f1f4eb41b3.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -19,19 +20,19 @@
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item p-2">
-              <%= link_to 'Home',user_path(current_user.id) %>
+              <i class="fas fa-home"><%= link_to 'Home',user_path(current_user.id) %></i>
             </li>
 
             <li class="nav-item p-2">
-              <%= link_to 'Users',users_path %>
+              <i class="fas fa-users"><%= link_to 'Users',users_path %></i>
             </li>
 
             <li class="nav-item p-2">
-              <%= link_to 'Books',books_path %>
+              <i class="fas fa-book-open"><%= link_to 'Books',books_path %></i>
             </li>
 
             <li class="nav-item p-2">
-              <%= link_to "logout", destroy_user_session_path, method: :delete %>
+              <i class="fas fa-sign-out-alt"><%= link_to "logout", destroy_user_session_path, method: :delete %></i>
             </li>
           </ul>
         </div>
@@ -45,19 +46,19 @@
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item p-2">
-              Home
+              <i class="fas fa-home"><%= link_to "Home", root_path %></i>
             </li>
 
             <li class="nav-item p-2">
-              <%= link_to "About", homes_index_path %>
+              <i class="fas fa-link"><%= link_to "About", homes_index_path %></i>
             </li>
 
             <li class="nav-item p-2">
-              <%= link_to "sign_up", new_user_registration_path %>
+              <i class="fas fa-user-plus"><%= link_to "sign up", new_user_registration_path %></i>
             </li>
 
             <li class="nav-item p-2">
-              <%= link_to "login", new_user_session_path %>
+              <i class="fas fa-sign-in-alt"><%= link_to "login", new_user_session_path %></i>
             </li>
           </ul>
         </div>

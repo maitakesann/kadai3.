@@ -1,5 +1,5 @@
 <h2>User info</h2>
-  
+
   <%= attachment_image_tag user,:profile_image, :fill, 20, 20, fallback: "no_image.jpg"  %>
 
   <table class="table">
@@ -16,11 +16,11 @@
     </tbody>
 
   </table>
-  
+
   <div class="row">
-    <div class="btn btn-outline-secondary btn-block">
-      <%= link_to "aikon", edit_user_path(@user.id)  %>
-    </div>
+    <%= link_to edit_user_path(@user.id), class: "btn btn-outline-secondary  btn-block  " do %>
+    <i class="fas fa-user-cog"></i>
+    <% end %>
   </div>
 
   <div class="row">
